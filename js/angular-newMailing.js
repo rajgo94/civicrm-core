@@ -175,7 +175,12 @@
 				$scope.trackreplies="1";
 		}
 		
-		$scope.now="1";
+		if($scope.currentMailing.scheduled_date == null){
+			$scope.now="1";
+		}
+		else {
+			$scope.now="0";
+		}
 		
 		$scope.reply = function(){
 			if($scope.trackreplies==0){
